@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Taxistas</title>
+</head>
+<body>
+<h1>Guia de Taxistas</h1>
+{% for taxista in lista_taxistas %}
+	<p>{{taxista.nome }} - {{taxista.DDD}} {{taxista.telefone}}</p>
+{% endfor %}
+</body>
+</html>

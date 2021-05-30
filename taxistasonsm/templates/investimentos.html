@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Investimentos</title>
+</head>
+<body>
+<h1>Investimentos</h1>
+<p>Lista de investimentos:</p>
+{% for investimento in lista_investimentos %}
+	<p><a href="{% url 'investimento' investimento.pk %}">{{ investimento.data_investimento }}</a></p>
+{% endfor %}
+<p><a href="{% url 'criar_investimento' %}">CRIAR NOVO INVESTIMENTO</a></p>
+</body>
+</html>

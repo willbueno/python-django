@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corridas do {{ corrida.taxista.nome }}</title>
+</head>
+<body>
+<h1>Lista de Corridas do Taxista: {{ corrida.taxista.nome }} - POR MEIO DO APARELHO INTEGRADO DE TAXI</h1>
+{% for corrida in lista_corridas %}
+	<p><a href="{% url 'corrida' corrida.pk %}">{{ corrida.data_corrida }}</a></p>
+{% endfor lista_corridas %}
+
+<p><a href="{% url 'criar_corrida' %}">(CRIAR NOVA CORRIDA)Download de informacoes do Aparelho Integrado de Taxi da corrida</a></p>
+</body>
+</html>

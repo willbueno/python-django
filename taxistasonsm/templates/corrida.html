@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corrida do Taxista: {{ corrida.taxista.nome }}</title>
+</head>
+<body>
+<h1>Informacoes da Corrida do Taxista: {{ corrida.taxista.nome }}</h1>
+<p>Data da Corrida: {{ corrida.data_corrida }}</p>
+<p>Endereco Inicial: {{ corrida.endereco_origem }}</p>
+<p>Endereco Final: {{ corrida.endereco_destino }}</p>
+<p>Horario Partida: {{ corrida.horario_partida }}</p>
+<p>Horario Chegada: {{ corrida.horario_chegada }}</p>
+<p>Distancia: {{ corrida.distancia }}</p>
+<p>Valor: {{ corrida.valor }}</p>
+{% if corrida.cartao %}
+	<p>Pagamento: Cartao</p>
+{% else %}
+	<p>Pagamento: Dinheiro</p>
+{% endif %}
+<p>Nome do Taxista: {{ corrida.taxista.nome }}</p>
+
+</body>
+</html>
